@@ -15,3 +15,12 @@ API_ERP/API_ERP/obj/Debug/net6.0/API_ERP.genruntimeconfig.cache
 API_ERP/API_ERP/obj/Debug/net6.0/API_ERP.pdb
 API_ERP/API_ERP/obj/project.assets.json
 API_ERP/API_ERP/obj/project.nuget.cache
+*.v2
+*.vsidx
+API_ERP/.vs/API_ERP/DesignTimeBuild/.dtbcache.v2
+API_ERP/.vs/API_ERP/v17/.suo
+API_ERP/.vs/ProjectEvaluation/api_erp.metadata.v5.2
+API_ERP/API_ERP/API_ERP.csproj.user
+API_ERP/.vs/API_ERP/DesignTimeBuild/.dtbcache.v2
+API_ERP/.vs/API_ERP/v17/.suo
+*.v2
