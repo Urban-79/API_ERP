@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pydim\\source\\repos\\API_ERP\\API_ERP\\API_ERP.csproj",
+      "projectUniqueName": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
       "projectName": "API_ERP",
-      "projectPath": "C:\\Users\\pydim\\source\\repos\\API_ERP\\API_ERP\\API_ERP.csproj",
+      "projectPath": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
       "packagesPath": "C:\\Users\\pydim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pydim\\source\\repos\\API_ERP\\API_ERP\\obj\\",
+      "outputPath": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
