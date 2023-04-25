@@ -40,7 +40,6 @@ namespace API_ERP.Controllers
         /// Get All Product
         /// </summary>
         /// <returns>test</returns>
-
         [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {

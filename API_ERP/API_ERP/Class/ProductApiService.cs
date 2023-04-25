@@ -16,7 +16,7 @@ namespace API_ERP.Class
 
         public async Task<List<Command>> GetCommandsAsync()
         {
-            var response = await _httpClient.GetAsync("command");
+            var response = await _httpClient.GetAsync($"command");
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<List<Command>>(json);
@@ -24,7 +24,7 @@ namespace API_ERP.Class
 
         public async Task<Command> GetCommandAsync(string id)
         {
-            var response = await _httpClient.GetAsync($"command/{id}");
+            var response = await _httpClient.GetAsync($"customers/"+id+"/orders");
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();

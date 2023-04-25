@@ -36,21 +36,5 @@ namespace API_ERP.Controllers
             }
             return Ok(product);
         }
-
-        /// <summary>
-        /// Get All Commandes
-        /// </summary>
-        /// <returns>test</returns>
-
-        [HttpGet]
-        public async Task<IActionResult> GetAllCommand()
-        {
-            var product = await _productApiService.GetCommandsAsync();
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return Ok(product);
-        }
     }
 }

@@ -31,12 +31,6 @@
             <param name="id"></param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.CommandesController.GetAllCommand">
-            <summary>
-            Get All Commandes
-            </summary>
-            <returns>test</returns>
-        </member>
         <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.String)">
             <summary>
             Get Commande
