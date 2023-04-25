@@ -31,11 +31,23 @@
             <param name="id"></param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.productsController.GetProduct(System.String)">
+        <member name="M:API_ERP.Controllers.CommandesController.GetAllCommand">
+            <summary>
+            Get All Commandes
+            </summary>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.String)">
             <summary>
             Get Commande
             </summary>
             <param name="id"></param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.ProductsController.GetAllProduct">
+            <summary>
+            Get All Product
+            </summary>
             <returns>test</returns>
         </member>
     </members>

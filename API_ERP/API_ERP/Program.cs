@@ -1,3 +1,5 @@
+using API_ERP.Class;
+
 namespace API_ERP
 {
     public class Program
@@ -6,13 +8,14 @@ namespace API_ERP
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
+            // Add services to the container.            
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            //initialisation du service ProductApiService
+            builder.Services.AddSingleton(new ProductApiService());
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

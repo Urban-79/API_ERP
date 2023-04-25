@@ -10,6 +10,12 @@ namespace API_ERP.Controllers
     [ApiController]
     public class CommandesController : ControllerBase
     {
+        private readonly ProductApiService _productApiService;
+
+        public CommandesController(ProductApiService productApiService)
+        {
+            _productApiService = productApiService;
+        }
         /// <summary>
         /// Get Commande
         /// </summary>
@@ -23,22 +29,28 @@ namespace API_ERP.Controllers
             {
                 return BadRequest();
             }
-
-            using (var httpClient = new HttpClient())
+            var product = await _productApiService.GetCommandAsync(id);
+            if (product == null)
             {
-                var apiUrl = "https://615f5fb4f7254d0017068109.mockapi.io/api/v1/command/" + id;
-                var response = await httpClient.GetAsync(apiUrl);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var json = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<Command>(json);
-                    return Ok(result);
-                }
-
-                return BadRequest();
+                return NotFound();
             }
+            return Ok(product);
         }
 
+        /// <summary>
+        /// Get All Commandes
+        /// </summary>
+        /// <returns>test</returns>
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllCommand()
+        {
+            var product = await _productApiService.GetCommandsAsync();
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return Ok(product);
+        }
     }
 }
