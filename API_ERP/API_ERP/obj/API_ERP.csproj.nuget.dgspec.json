@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj": {}
+    "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj": {
+    "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
+        "projectUniqueName": "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
         "projectName": "API_ERP",
-        "projectPath": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
-        "packagesPath": "C:\\Users\\pydim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\obj\\",
+        "projectPath": "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
+        "packagesPath": "C:\\Users\\Dirbeq\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pydim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dirbeq\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,9 +44,17 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
             }
           },
           "imports": [
@@ -60,6 +68,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -68,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
