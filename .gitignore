@@ -100,3 +100,11 @@ API_ERP/API_ERP/obj/Debug/net6.0/ref/API_ERP.dll
 API_ERP/API_ERP/obj/Debug/net6.0/refint/API_ERP.dll
 API_ERP/API_ERP/obj/project.assets.json
 API_ERP/API_ERP/obj/project.nuget.cache
+*.dll
+API_ERP/API_ERP/bin/Debug/net6.0/API_ERP.dll
+API_ERP/API_ERP/bin/Debug/net6.0/API_ERP.pdb
+API_ERP/API_ERP/obj/Debug/net6.0/API_ERP.csproj.CoreCompileInputs.cache
+API_ERP/API_ERP/obj/Debug/net6.0/API_ERP.dll
+API_ERP/API_ERP/obj/Debug/net6.0/API_ERP.pdb
+API_ERP/API_ERP/obj/Debug/net6.0/ref/API_ERP.dll
+API_ERP/API_ERP/obj/Debug/net6.0/refint/API_ERP.dll

@@ -9,11 +9,11 @@ namespace API_ERP.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ProductApiService _productApiService;
+        private readonly IERPApiService _ERPApiService;
 
-        public ProductsController(ProductApiService productApiService)
+        public ProductsController(IERPApiService ERPApiService)
         {
-            _productApiService = productApiService;
+            _ERPApiService = ERPApiService;
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace API_ERP.Controllers
             {
                 return BadRequest();
             }
-            var product = await _productApiService.GetProductAsync(id);
+            var product = await _ERPApiService.GetProductAsync(id);
             if (product == null)
             {
                 return NotFound();
@@ -43,7 +43,7 @@ namespace API_ERP.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
-            var product = await _productApiService.GetProductsAsync();
+            var product = await _ERPApiService.GetProductsAsync();
             if (product == null)
             {
                 return NotFound();

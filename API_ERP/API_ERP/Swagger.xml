@@ -24,11 +24,42 @@
             la Description de la commande
             </summary>
         </member>
+        <member name="T:API_ERP.Class.Customer">
+            <summary>
+            Classe du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Address">
+            <summary>
+            Classe adresse du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Profile">
+            <summary>
+            Classe profile du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Company">
+            <summary>
+            Classe Entreprise du client
+            </summary>
+        </member>
+        <member name="T:API_ERP.Class.Order">
+            <summary>
+            Classe Commande du client
+            </summary>
+        </member>
         <member name="M:API_ERP.Controllers.CommandesController.GetCommand(System.String)">
             <summary>
             Get Commande
             </summary>
-            <param name="id"></param>
+            <param name="id">Id de la commande</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.CommandesController.GetAllCommands">
+            <summary>
+            Get all Commandes
+            </summary>      
             <returns>test</returns>
         </member>
         <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.String)">

@@ -1,4 +1,5 @@
 using API_ERP.Class;
+using Microsoft.OpenApi.Models;
 
 namespace API_ERP
 {
@@ -13,9 +14,22 @@ namespace API_ERP
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "API ERP Paye ton Kawa.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "PayeTonKawa",
+                        Email = "PayeTonKawa@gmail.com"
+                    }
+                });
+                string xmlPath = Path.Combine(AppContext.BaseDirectory, "Swagger.xml");
+                c.IncludeXmlComments(xmlPath);
+            });
             //initialisation du service ProductApiService
-            builder.Services.AddSingleton(new ProductApiService());
+            builder.Services.AddSingleton<IERPApiService>(new ERPApiService());
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
