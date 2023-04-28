@@ -23,12 +23,8 @@ namespace API_ERP.Controllers
         /// <returns>test</returns>
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCommand(string id)
+        public async Task<IActionResult> GetCommand(int id)
         {
-            if (string.IsNullOrEmpty(id))
-            {
-                return BadRequest();
-            }
             var order = await _ERPApiService.GetCommandAsync(id);
             if (order == null)
             {

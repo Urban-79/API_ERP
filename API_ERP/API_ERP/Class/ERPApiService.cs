@@ -36,7 +36,7 @@ namespace API_ERP.Class
             }
             return commands;
         }
-        public async Task<Order>GetCommandAsync(string id)
+        public async Task<Order>GetCommandAsync(int id)
         {
             //Customer customer = customers.FirstOrDefault(c => c.Orders.Any(o => o.CustomerId == TON_ID));
             //Order commande = customer.Orders.FirstOrDefault(o => o.id == TON_ID);
@@ -48,7 +48,7 @@ namespace API_ERP.Class
             }
             return null;
         }
-        public async Task<Product> GetProductAsync(string id)
+        public async Task<Product> GetProductAsync(int id)
         {
             var response = await _httpClient.GetAsync($"products/{id}");
             if (response.IsSuccessStatusCode)
@@ -71,10 +71,10 @@ namespace API_ERP.Class
     }
     public interface IERPApiService
     {
-        Task<List<Order>?> GetCommandsAsync();
-        Task<Order?> GetCommandAsync(string id);
-        Task<List<Product>?> GetProductsAsync();
-        Task<Product?> GetProductAsync(string id);
+        Task<List<Order>> GetCommandsAsync();
+        Task<Order> GetCommandAsync(int id);
+        Task<List<Product>> GetProductsAsync();
+        Task<Product> GetProductAsync(int id);
     }
 
 }

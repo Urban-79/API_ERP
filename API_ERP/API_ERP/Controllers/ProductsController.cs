@@ -22,12 +22,8 @@ namespace API_ERP.Controllers
         /// <param name="id"></param>
         /// <returns>test</returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetProduct(string id)
+        public async Task<IActionResult> GetProduct(int id)
         {
-            if (string.IsNullOrEmpty(id))
-            {
-                return BadRequest();
-            }
             var product = await _ERPApiService.GetProductAsync(id);
             if (product == null)
             {

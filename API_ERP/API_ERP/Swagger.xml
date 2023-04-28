@@ -47,7 +47,7 @@
             <param name="fileName"></param>
             <param name="password"></param>
         </member>
-        <member name="M:API_ERP.Controllers.CommandesController.GetCommand(System.String)">
+        <member name="M:API_ERP.Controllers.CommandesController.GetCommand(System.Int32)">
             <summary>
             Get Commande
             </summary>
@@ -60,7 +60,7 @@
             </summary>      
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.String)">
+        <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.Int32)">
             <summary>
             Get Product
             </summary>

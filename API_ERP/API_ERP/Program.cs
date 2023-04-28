@@ -1,4 +1,5 @@
 using API_ERP.Class;
+using API_ERP_Context;
 using Microsoft.OpenApi.Models;
 
 namespace API_ERP
@@ -29,7 +30,8 @@ namespace API_ERP
                 c.IncludeXmlComments(xmlPath);
             });
             //initialisation du service ProductApiService
-            builder.Services.AddSingleton<IERPApiService>(new ERPApiService());
+            //builder.Services.AddSingleton<IERPApiService>(new ERPApiService()); //Context API 
+            builder.Services.AddSingleton<IERPApiService>(new ERPcontextMock()); //Context Mock
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
