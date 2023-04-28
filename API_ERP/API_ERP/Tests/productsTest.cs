@@ -1,6 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using API_ERP.Class;
 using API_ERP.Controllers;
-using API_ERP.Class;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
@@ -9,10 +8,10 @@ namespace API_ERP.Tests
     public class ProductsControllerTests
     {
         private readonly ProductsController _controller;
-        
+
         public ProductsControllerTests()
         {
-            var service = new ProductApiService(); // Remplacer par votre service de test
+            var service = new ERPApiService(); // Remplacer par votre service de test
             _controller = new ProductsController(service);
         }
 
@@ -64,5 +63,4 @@ namespace API_ERP.Tests
         //     mockService.Verify(s => s.GetProductAsync(id), Times.Once);
         // }
     }
-
 }

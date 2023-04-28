@@ -49,6 +49,24 @@
             Classe Commande du client
             </summary>
         </member>
+        <member name="M:API_ERP.Class.Utils.GenerateQRCode(System.String,System.String)">
+            <summary>
+            Générer un QRCode
+            </summary>
+            <param name="data"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:API_ERP.Class.Utils.SendEmailWithAttachment(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Envoi d'un email
+            </summary>
+            <param name="fromAddress"></param>
+            <param name="toAddress"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="fileName"></param>
+            <param name="password"></param>
+        </member>
         <member name="M:API_ERP.Controllers.CommandesController.GetCommand(System.String)">
             <summary>
             Get Commande
