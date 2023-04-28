@@ -64,3 +64,13 @@ C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\obj\Debug\net6.0\API_ERP
 C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\obj\Debug\net6.0\ref\API_ERP.dll
 C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\Swagger.xml
 C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\QRCoder.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\xunit.abstractions.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\xunit.assert.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\xunit.core.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\xunit.execution.dotnet.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\pydim\Documents\GitHub\API_ERP\API_ERP\API_ERP\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

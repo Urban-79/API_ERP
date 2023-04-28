@@ -4,26 +4,6 @@
         <name>API_ERP</name>
     </assembly>
     <members>
-        <member name="T:API_ERP.Class.Command">
-            <summary>
-            La classe command
-            </summary>
-        </member>
-        <member name="P:API_ERP.Class.Command.Id">
-            <summary>
-            l'id de la commande
-            </summary>
-        </member>
-        <member name="P:API_ERP.Class.Command.Name">
-            <summary>
-            le nom de la commande
-            </summary>
-        </member>
-        <member name="P:API_ERP.Class.Command.Description">
-            <summary>
-            la Description de la commande
-            </summary>
-        </member>
         <member name="T:API_ERP.Class.Customer">
             <summary>
             Classe du client
@@ -41,24 +21,24 @@
         </member>
         <member name="T:API_ERP.Class.Company">
             <summary>
-                Classe Entreprise du client
+            Classe Entreprise du client
             </summary>
         </member>
         <member name="T:API_ERP.Class.Order">
             <summary>
-                Classe Commande du client
+            Classe Commande du client
             </summary>
         </member>
         <member name="M:API_ERP.Class.Utils.GenerateQRCode(System.String,System.String)">
             <summary>
-                Générer un QRCode
+            Générer un QRCode
             </summary>
             <param name="data"></param>
             <param name="fileName"></param>
         </member>
         <member name="M:API_ERP.Class.Utils.SendEmailWithAttachment(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
-                Envoi d'un email
+            Envoi d'un email
             </summary>
             <param name="fromAddress"></param>
             <param name="toAddress"></param>
@@ -69,20 +49,20 @@
         </member>
         <member name="M:API_ERP.Controllers.CommandesController.GetCommand(System.String)">
             <summary>
-                Get Commande
+            Get Commande
             </summary>
             <param name="id">Id de la commande</param>
             <returns>test</returns>
         </member>
         <member name="M:API_ERP.Controllers.CommandesController.GetAllCommands">
             <summary>
-                Get all Commandes
+            Get all Commandes
             </summary>      
             <returns>test</returns>
         </member>
         <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.String)">
             <summary>
-            Get Commande
+            Get Product
             </summary>
             <param name="id"></param>
             <returns>test</returns>

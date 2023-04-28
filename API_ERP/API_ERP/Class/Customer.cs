@@ -5,7 +5,7 @@
     /// </summary>
     public class Customer
     {
-        public string CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }
         public string FirstName { get; set; }
@@ -13,7 +13,7 @@
         public Address Address { get; set; }
         public Profile Profile { get; set; }
         public Company Company { get; set; }
-        public string Id { get; set; }
+        public int Id { get; set; }
         public List<Order> Orders { get; set; }
     }
     /// <summary>
@@ -44,8 +44,8 @@
     /// </summary>
     public class Order
     {
-        public string CreatedAt { get; set; }
-        public string Id { get; set; }
-        public string CustomerId { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
     }
 }

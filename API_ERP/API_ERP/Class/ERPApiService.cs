@@ -14,7 +14,7 @@ namespace API_ERP.Class
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://615f5fb4f7254d0017068109.mockapi.io/api/v1/");
         }
-        public async Task<List<Order>?> GetCommandsAsync()
+        public async Task<List<Order>> GetCommandsAsync()
         {
             var response = await _httpClient.GetAsync($"customers");
             response.EnsureSuccessStatusCode();
@@ -36,7 +36,7 @@ namespace API_ERP.Class
             }
             return commands;
         }
-        public async Task<List<Command>?> GetCommandAsync(string id)
+        public async Task<Order>GetCommandAsync(string id)
         {
             //Customer customer = customers.FirstOrDefault(c => c.Orders.Any(o => o.CustomerId == TON_ID));
             //Order commande = customer.Orders.FirstOrDefault(o => o.id == TON_ID);
@@ -44,11 +44,11 @@ namespace API_ERP.Class
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<List<Command>>(json);
+                return JsonConvert.DeserializeObject<Order>(json);
             }
             return null;
         }
-        public async Task<Product?> GetProductAsync(string id)
+        public async Task<Product> GetProductAsync(string id)
         {
             var response = await _httpClient.GetAsync($"products/{id}");
             if (response.IsSuccessStatusCode)
@@ -58,7 +58,7 @@ namespace API_ERP.Class
             }
             return null;
         }
-        public async Task<List<Product>?> GetProductsAsync()
+        public async Task<List<Product>> GetProductsAsync()
         {
             var response = await _httpClient.GetAsync($"products");
             if (response.IsSuccessStatusCode)
@@ -72,7 +72,7 @@ namespace API_ERP.Class
     public interface IERPApiService
     {
         Task<List<Order>?> GetCommandsAsync();
-        Task<List<Command>?> GetCommandAsync(string id);
+        Task<Order?> GetCommandAsync(string id);
         Task<List<Product>?> GetProductsAsync();
         Task<Product?> GetProductAsync(string id);
     }

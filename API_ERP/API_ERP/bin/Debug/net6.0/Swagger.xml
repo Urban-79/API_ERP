@@ -4,26 +4,6 @@
         <name>API_ERP</name>
     </assembly>
     <members>
-        <member name="T:API_ERP.Class.Command">
-            <summary>
-            La classe command
-            </summary>
-        </member>
-        <member name="P:API_ERP.Class.Command.Id">
-            <summary>
-            l'id de la commande
-            </summary>
-        </member>
-        <member name="P:API_ERP.Class.Command.Name">
-            <summary>
-            le nom de la commande
-            </summary>
-        </member>
-        <member name="P:API_ERP.Class.Command.Description">
-            <summary>
-            la Description de la commande
-            </summary>
-        </member>
         <member name="T:API_ERP.Class.Customer">
             <summary>
             Classe du client
@@ -82,7 +62,7 @@
         </member>
         <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.String)">
             <summary>
-            Get Commande
+            Get Product
             </summary>
             <param name="id"></param>
             <returns>test</returns>

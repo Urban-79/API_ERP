@@ -17,7 +17,7 @@ namespace API_ERP.Controllers
         }
 
         /// <summary>
-        /// Get Commande
+        /// Get Product
         /// </summary>
         /// <param name="id"></param>
         /// <returns>test</returns>
