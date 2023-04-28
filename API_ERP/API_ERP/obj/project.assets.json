@@ -5165,19 +5165,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dirbeq\\.nuget\\packages\\": {}
+    "C:\\Users\\pydim\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
+      "projectUniqueName": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
       "projectName": "API_ERP",
-      "projectPath": "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
-      "packagesPath": "C:\\Users\\Dirbeq\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dirbeq\\RiderProjects\\API_ERP\\API_ERP\\API_ERP\\obj\\",
+      "projectPath": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\API_ERP.csproj",
+      "packagesPath": "C:\\Users\\pydim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pydim\\Documents\\GitHub\\API_ERP\\API_ERP\\API_ERP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dirbeq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pydim\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5231,24 +5231,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.13, 6.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5257,7 +5239,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
