@@ -60,6 +60,27 @@
             </summary>      
             <returns>test</returns>
         </member>
+        <member name="M:API_ERP.Controllers.CommandesController.AddCommand(API_ERP.Class.Order)">
+            <summary>
+            Add Commande
+            </summary>
+            <param name="addedOrder">object order </param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.CommandesController.UpdateCommand(API_ERP.Class.Order)">
+            <summary>
+            Update Commande
+            </summary>
+            <param name="updatedOrder">Objet Order</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.CommandesController.DeleteCommand(System.Int32)">
+            <summary>
+            Delete Commande
+            </summary>
+            <param name="id">Objet Order</param>
+            <returns>test</returns>
+        </member>
         <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.Int32)">
             <summary>
             Get Product
@@ -71,6 +92,27 @@
             <summary>
             Get All Product
             </summary>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.ProductsController.AddProduct(API_ERP.Class.Product)">
+            <summary>
+            Add Commande
+            </summary>
+            <param name="addedOrder">object order </param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.ProductsController.UpdateCommand(API_ERP.Class.Product)">
+            <summary>
+            Update Product
+            </summary>
+            <param name="updatedProduct">Objet Product</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.ProductsController.DeleteProduct(System.Int32)">
+            <summary>
+            Delete Product
+            </summary>
+            <param name="id">Objet Product</param>
             <returns>test</returns>
         </member>
     </members>

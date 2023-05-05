@@ -36,11 +36,11 @@ namespace API_ERP.Class
             }
             return commands;
         }
-        public async Task<Order>GetCommandAsync(int id)
+        public async Task<Order> GetCommandAsync(int id)
         {
             //Customer customer = customers.FirstOrDefault(c => c.Orders.Any(o => o.CustomerId == TON_ID));
             //Order commande = customer.Orders.FirstOrDefault(o => o.id == TON_ID);
-            var response = await _httpClient.GetAsync($"customers/"+id+"/orders");
+            var response = await _httpClient.GetAsync($"customers/" + id + "/orders");
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
@@ -68,13 +68,49 @@ namespace API_ERP.Class
             }
             return null;
         }
+
+        public Task<Order> UpdateCommandAsync(Order updatedOrder)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Order> DeleteCommandAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Order> AddCommandAsync(Order updatedOrder)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Product> AddProductAsync(Product AddedProduct)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Product> DeleteProductAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Product> UpdateProductAsync(Product updatedProduct)
+        {
+            throw new NotImplementedException();
+        }
     }
     public interface IERPApiService
     {
         Task<List<Order>> GetCommandsAsync();
         Task<Order> GetCommandAsync(int id);
+        Task<Order> AddCommandAsync(Order AddedOrder);
+        Task<Order> UpdateCommandAsync(Order updatedOrder);
+        Task<Order> DeleteCommandAsync(int id);
         Task<List<Product>> GetProductsAsync();
         Task<Product> GetProductAsync(int id);
+        Task<Product> AddProductAsync(Product AddedProduct);
+        Task<Product> DeleteProductAsync(int id);
+        Task<Product> UpdateProductAsync(Product updatedProduct);
     }
 
 }

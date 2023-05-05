@@ -46,5 +46,52 @@ namespace API_ERP.Controllers
             }
             return Ok(product);            
         }
+
+        /// <summary>
+        /// Add Commande
+        /// </summary>
+        /// <param name="addedOrder">object order </param>
+        /// <returns>test</returns>
+        [HttpPost]
+        public async Task<IActionResult> AddProduct(Product addedProduct)
+        {
+            Product result = await _ERPApiService.AddProductAsync(addedProduct);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+        /// <summary>
+        /// Update Product
+        /// </summary>
+        /// <param name="updatedProduct">Objet Product</param>
+        /// <returns>test</returns>
+        [HttpPut]
+        public async Task<IActionResult> UpdateCommand(Product updatedProduct)
+        {
+            Product result = await _ERPApiService.UpdateProductAsync(updatedProduct);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Delete Product
+        /// </summary>
+        /// <param name="id">Objet Product</param>
+        /// <returns>test</returns>
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            Product result = await _ERPApiService.DeleteProductAsync(id);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
     }
 }
