@@ -7,11 +7,11 @@ namespace API_ERP.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class ProduitsController : ControllerBase
     {
         private readonly IERPApiService _ERPApiService;
 
-        public ProductsController(IERPApiService ERPApiService)
+        public ProduitsController(IERPApiService ERPApiService)
         {
             _ERPApiService = ERPApiService;
         }
@@ -48,7 +48,7 @@ namespace API_ERP.Controllers
         }
 
         /// <summary>
-        /// Add Commande
+        /// Add Product
         /// </summary>
         /// <param name="addedOrder">object order </param>
         /// <returns>test</returns>

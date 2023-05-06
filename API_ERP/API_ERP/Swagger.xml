@@ -81,34 +81,34 @@
             <param name="id">Objet Order</param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProductsController.GetProduct(System.Int32)">
+        <member name="M:API_ERP.Controllers.ProduitsController.GetProduct(System.Int32)">
             <summary>
             Get Product
             </summary>
             <param name="id"></param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProductsController.GetAllProduct">
+        <member name="M:API_ERP.Controllers.ProduitsController.GetAllProduct">
             <summary>
             Get All Product
             </summary>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProductsController.AddProduct(API_ERP.Class.Product)">
+        <member name="M:API_ERP.Controllers.ProduitsController.AddProduct(API_ERP.Class.Product)">
             <summary>
-            Add Commande
+            Add Product
             </summary>
             <param name="addedOrder">object order </param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProductsController.UpdateCommand(API_ERP.Class.Product)">
+        <member name="M:API_ERP.Controllers.ProduitsController.UpdateCommand(API_ERP.Class.Product)">
             <summary>
             Update Product
             </summary>
             <param name="updatedProduct">Objet Product</param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProductsController.DeleteProduct(System.Int32)">
+        <member name="M:API_ERP.Controllers.ProduitsController.DeleteProduct(System.Int32)">
             <summary>
             Delete Product
             </summary>

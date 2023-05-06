@@ -38,8 +38,6 @@ namespace API_ERP.Class
         }
         public async Task<Order> GetCommandAsync(int id)
         {
-            //Customer customer = customers.FirstOrDefault(c => c.Orders.Any(o => o.CustomerId == TON_ID));
-            //Order commande = customer.Orders.FirstOrDefault(o => o.id == TON_ID);
             var response = await _httpClient.GetAsync($"customers/" + id + "/orders");
             if (response.IsSuccessStatusCode)
             {
