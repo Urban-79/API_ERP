@@ -1,7 +1,5 @@
 ﻿using API_ERP.Class;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace API_ERP.Controllers
 {
@@ -9,11 +7,11 @@ namespace API_ERP.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IERPApiService _ERPApiService;
+        private readonly IERPApiService _erpApiService;
 
-        public ProductsController(IERPApiService ERPApiService)
+        public ProductsController(IERPApiService erpApiService)
         {
-            _ERPApiService = ERPApiService;
+            _erpApiService = erpApiService;
         }
 
         /// <summary>
@@ -24,11 +22,12 @@ namespace API_ERP.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProduct(int id)
         {
-            var product = await _ERPApiService.GetProductAsync(id);
+            var product = await _erpApiService.GetProductAsync(id);
             if (product == null)
             {
                 return NotFound();
             }
+
             return Ok(product);
         }
 
@@ -39,29 +38,32 @@ namespace API_ERP.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
-            var product = await _ERPApiService.GetProductsAsync();
+            var product = await _erpApiService.GetProductsAsync();
             if (product == null)
             {
                 return NotFound();
             }
-            return Ok(product);            
+
+            return Ok(product);
         }
 
         /// <summary>
         /// Add Commande
         /// </summary>
-        /// <param name="addedOrder">object order </param>
+        /// <param name="addedProduct">object order </param>
         /// <returns>test</returns>
         [HttpPost]
         public async Task<IActionResult> AddProduct(Product addedProduct)
         {
-            Product result = await _ERPApiService.AddProductAsync(addedProduct);
+            Product result = await _erpApiService.AddProductAsync(addedProduct);
             if (result == null)
             {
                 return NotFound();
             }
+
             return Ok(result);
         }
+
         /// <summary>
         /// Update Product
         /// </summary>
@@ -70,11 +72,12 @@ namespace API_ERP.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateCommand(Product updatedProduct)
         {
-            Product result = await _ERPApiService.UpdateProductAsync(updatedProduct);
+            Product result = await _erpApiService.UpdateProductAsync(updatedProduct);
             if (result == null)
             {
                 return NotFound();
             }
+
             return Ok(result);
         }
 
@@ -86,11 +89,12 @@ namespace API_ERP.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            Product result = await _ERPApiService.DeleteProductAsync(id);
+            Product result = await _erpApiService.DeleteProductAsync(id);
             if (result == null)
             {
                 return NotFound();
             }
+
             return Ok(result);
         }
     }

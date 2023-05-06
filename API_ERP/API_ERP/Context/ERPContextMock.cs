@@ -1,26 +1,23 @@
 ﻿using API_ERP.Class;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json.Nodes;
-using System.Threading.Tasks;
 
-namespace API_ERP_Context
+namespace API_ERP.Context
 {
     public class ERPcontextMock : IERPApiService
     {
-        public List<Customer> customers { get; }
-        public List<Product> products { get; }
         public ERPcontextMock()
         {
-            string fileJsonProducts = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, ".\\Data\\products.json"));
-            string fileJsonCustomers = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, ".\\Data\\customers.json"));
+            string fileJsonProducts =
+                File.ReadAllText(Path.Combine(AppContext.BaseDirectory, ".\\Data\\products.json"));
+            string fileJsonCustomers =
+                File.ReadAllText(Path.Combine(AppContext.BaseDirectory, ".\\Data\\customers.json"));
             products = JsonConvert.DeserializeObject<List<Product>>(fileJsonProducts);
             customers = JsonConvert.DeserializeObject<List<Customer>>(fileJsonCustomers);
         }
+
+        public List<Customer> customers { get; }
+        public List<Product> products { get; }
+
         #region Command
 
         public async Task<List<Order>> GetCommandsAsync()
@@ -39,6 +36,7 @@ namespace API_ERP_Context
                     commands.Add(command);
                 }
             }
+
             return commands;
         }
 
@@ -58,32 +56,35 @@ namespace API_ERP_Context
                     commands.Add(command);
                 }
             }
-            Order OrderSelected = commands.FirstOrDefault(c => c.Id == id);
-            return OrderSelected;
+
+            Order orderSelected = commands.FirstOrDefault(c => c.Id == id);
+            return orderSelected;
         }
-        public async Task<Order> AddCommandAsync(Order newOrder)
+
+        public async Task<Order> AddCommandAsync(Order addedOrder)
         {
-            Customer existingCustomer = customers.FirstOrDefault(c => c.Id == newOrder.CustomerId);
+            Customer existingCustomer = customers.FirstOrDefault(c => c.Id == addedOrder.CustomerId);
             if (existingCustomer == null)
             {
                 return null;
             }
-            if (await GetCommandAsync(newOrder.Id) != null)
+
+            if (await GetCommandAsync(addedOrder.Id) != null)
             {
                 return null;
             }
 
-            List<Order> ListOrder = await GetCommandsAsync();
-            Order lastOrder = ListOrder.OrderByDescending(c => c.Id).FirstOrDefault();
+            List<Order> listOrder = await GetCommandsAsync();
+            Order lastOrder = listOrder.OrderByDescending(c => c.Id).FirstOrDefault();
             int newOrderId = (lastOrder != null) ? lastOrder.Id + 1 : 1;
 
-            newOrder.Id = newOrderId;
-            existingCustomer.Orders.Add(newOrder);
+            addedOrder.Id = newOrderId;
+            existingCustomer.Orders.Add(addedOrder);
 
             // save changes to file
             File.WriteAllText(".\\Data\\customers.json", JsonConvert.SerializeObject(customers));
 
-            return newOrder;
+            return addedOrder;
         }
 
         public async Task<Order> UpdateCommandAsync(Order updatedOrder)
@@ -107,6 +108,7 @@ namespace API_ERP_Context
                     }
                 }
             }
+
             return null;
         }
 
@@ -115,7 +117,8 @@ namespace API_ERP_Context
             Order deletedOrder = await GetCommandAsync(id);
             if (deletedOrder != null)
             {
-                Order orderFichier = customers.FirstOrDefault(c => c.Id == deletedOrder.CustomerId).Orders.FirstOrDefault(o => o.Id == id);
+                Order orderFichier = customers.FirstOrDefault(c => c.Id == deletedOrder.CustomerId).Orders
+                    .FirstOrDefault(o => o.Id == id);
                 customers.FirstOrDefault(c => c.Id == deletedOrder.CustomerId).Orders.Remove(orderFichier);
                 File.WriteAllText(".\\Data\\customers.json", JsonConvert.SerializeObject(customers));
                 return deletedOrder;
@@ -125,8 +128,11 @@ namespace API_ERP_Context
                 return null;
             }
         }
+
         #endregion
+
         #region Product
+
         public async Task<List<Product>> GetProductsAsync()
         {
             return products;
@@ -137,22 +143,24 @@ namespace API_ERP_Context
             Product product = products.FirstOrDefault(c => c.Id == id);
             return product;
         }
-        public async Task<Product> AddProductAsync(Product AddedProduct)
+
+        public async Task<Product> AddProductAsync(Product addedProduct)
         {
             Product lastProduct = products.OrderByDescending(p => p.Id).FirstOrDefault();
             int newProductId = (lastProduct != null) ? lastProduct.Id + 1 : 1;
-            if (AddedProduct != null)
+            if (addedProduct != null)
             {
-                AddedProduct.Id = newProductId;
-                products.Add(AddedProduct);
+                addedProduct.Id = newProductId;
+                products.Add(addedProduct);
                 File.WriteAllText(".\\Data\\products.json", JsonConvert.SerializeObject(products));
-                return AddedProduct;
+                return addedProduct;
             }
             else
             {
                 return null;
             }
         }
+
         public async Task<Product> DeleteProductAsync(int id)
         {
             Product deletedProduct = await GetProductAsync(id);
@@ -167,16 +175,15 @@ namespace API_ERP_Context
                 return null;
             }
         }
+
         public async Task<Product> UpdateProductAsync(Product updatedProduct)
         {
             if (updatedProduct != null)
             {
-
                 // Recherche de la commande à mettre à jour
                 Product productToUpdate = await GetProductAsync(updatedProduct.Id);
                 if (productToUpdate != null)
                 {
-
                     // Mise à jour des propriétés de la commande
                     productToUpdate.Details = updatedProduct.Details;
                     productToUpdate.Name = updatedProduct.Name;
@@ -188,10 +195,10 @@ namespace API_ERP_Context
                     return productToUpdate;
                 }
             }
+
             return null;
         }
+
         #endregion
     }
 }
-
-

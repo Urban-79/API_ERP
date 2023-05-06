@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using API_ERP.Class;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
-using API_ERP.Class;
 
 namespace API_ERP.Controllers
 {
@@ -10,28 +7,30 @@ namespace API_ERP.Controllers
     [ApiController]
     public class CommandesController : ControllerBase
     {
-        private readonly IERPApiService _ERPApiService;
+        private readonly IERPApiService _erpApiService;
 
-        public CommandesController(IERPApiService ERPApiService)
+        public CommandesController(IERPApiService erpApiService)
         {
-            _ERPApiService = ERPApiService;
+            _erpApiService = erpApiService;
         }
+
         /// <summary>
         /// Get Commande
         /// </summary>
         /// <param name="id">Id de la commande</param>
         /// <returns>test</returns>
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCommand(int id)
         {
-            Order order = await _ERPApiService.GetCommandAsync(id);
+            Order order = await _erpApiService.GetCommandAsync(id);
             if (order == null)
             {
                 return NotFound();
             }
+
             return Ok(order);
         }
+
         /// <summary>
         /// Get all Commandes
         /// </summary>      
@@ -39,13 +38,15 @@ namespace API_ERP.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllCommands()
         {
-            List<Order> orders = await _ERPApiService.GetCommandsAsync();
+            List<Order> orders = await _erpApiService.GetCommandsAsync();
             if (orders == null)
             {
                 return NotFound();
             }
+
             return Ok(orders);
         }
+
         /// <summary>
         /// Add Commande
         /// </summary>
@@ -54,11 +55,12 @@ namespace API_ERP.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCommand(Order addedOrder)
         {
-            Order result = await _ERPApiService.AddCommandAsync(addedOrder);
+            Order result = await _erpApiService.AddCommandAsync(addedOrder);
             if (result == null)
             {
                 return NotFound();
             }
+
             return Ok(result);
         }
 
@@ -70,13 +72,15 @@ namespace API_ERP.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateCommand(Order updatedOrder)
         {
-            Order result = await _ERPApiService.UpdateCommandAsync(updatedOrder);
+            Order result = await _erpApiService.UpdateCommandAsync(updatedOrder);
             if (result == null)
             {
                 return NotFound();
             }
+
             return Ok(result);
         }
+
         /// <summary>
         /// Delete Commande
         /// </summary>
@@ -85,11 +89,12 @@ namespace API_ERP.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteCommand(int id)
         {
-            Order result = await _ERPApiService.DeleteCommandAsync(id);
+            Order result = await _erpApiService.DeleteCommandAsync(id);
             if (result == null)
             {
                 return NotFound();
             }
+
             return Ok(result);
         }
     }

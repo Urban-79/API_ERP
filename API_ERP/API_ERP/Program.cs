@@ -1,5 +1,5 @@
 using API_ERP.Class;
-using API_ERP_Context;
+using API_ERP.Context;
 using Microsoft.OpenApi.Models;
 
 namespace API_ERP
@@ -11,7 +11,7 @@ namespace API_ERP
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.            
-            
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

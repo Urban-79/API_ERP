@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Text;
+﻿using Newtonsoft.Json;
 
 namespace API_ERP.Class
 {
@@ -14,6 +11,7 @@ namespace API_ERP.Class
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://615f5fb4f7254d0017068109.mockapi.io/api/v1/");
         }
+
         public async Task<List<Order>> GetCommandsAsync()
         {
             var response = await _httpClient.GetAsync($"customers");
@@ -34,8 +32,10 @@ namespace API_ERP.Class
                     commands.Add(command);
                 }
             }
+
             return commands;
         }
+
         public async Task<Order> GetCommandAsync(int id)
         {
             //Customer customer = customers.FirstOrDefault(c => c.Orders.Any(o => o.CustomerId == TON_ID));
@@ -46,8 +46,10 @@ namespace API_ERP.Class
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<Order>(json);
             }
+
             return null;
         }
+
         public async Task<Product> GetProductAsync(int id)
         {
             var response = await _httpClient.GetAsync($"products/{id}");
@@ -56,8 +58,10 @@ namespace API_ERP.Class
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<Product>(json);
             }
+
             return null;
         }
+
         public async Task<List<Product>> GetProductsAsync()
         {
             var response = await _httpClient.GetAsync($"products");
@@ -66,6 +70,7 @@ namespace API_ERP.Class
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<List<Product>>(json);
             }
+
             return null;
         }
 
@@ -79,12 +84,12 @@ namespace API_ERP.Class
             throw new NotImplementedException();
         }
 
-        public Task<Order> AddCommandAsync(Order updatedOrder)
+        public Task<Order> AddCommandAsync(Order addedOrder)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> AddProductAsync(Product AddedProduct)
+        public Task<Product> AddProductAsync(Product addedProduct)
         {
             throw new NotImplementedException();
         }
@@ -99,18 +104,18 @@ namespace API_ERP.Class
             throw new NotImplementedException();
         }
     }
+
     public interface IERPApiService
     {
         Task<List<Order>> GetCommandsAsync();
         Task<Order> GetCommandAsync(int id);
-        Task<Order> AddCommandAsync(Order AddedOrder);
+        Task<Order> AddCommandAsync(Order addedOrder);
         Task<Order> UpdateCommandAsync(Order updatedOrder);
         Task<Order> DeleteCommandAsync(int id);
         Task<List<Product>> GetProductsAsync();
         Task<Product> GetProductAsync(int id);
-        Task<Product> AddProductAsync(Product AddedProduct);
+        Task<Product> AddProductAsync(Product addedProduct);
         Task<Product> DeleteProductAsync(int id);
         Task<Product> UpdateProductAsync(Product updatedProduct);
     }
-
 }
