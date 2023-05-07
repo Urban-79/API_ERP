@@ -44,7 +44,10 @@ namespace API_ERP
                     c.RoutePrefix = string.Empty;
                 });
             }
-
+            app.UseCors(builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
