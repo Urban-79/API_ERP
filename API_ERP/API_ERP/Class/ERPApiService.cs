@@ -101,6 +101,15 @@ namespace API_ERP.Class
         {
             throw new NotImplementedException();
         }
+
+        public Task<int> GetStockAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public Task<Product> UpdateStockAsync(int id, int stock)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public interface IERPApiService
@@ -115,5 +124,7 @@ namespace API_ERP.Class
         Task<Product> AddProductAsync(Product addedProduct);
         Task<Product> DeleteProductAsync(int id);
         Task<Product> UpdateProductAsync(Product updatedProduct);
+        Task<int> GetStockAsync(int id);
+        Task<Product> UpdateStockAsync(int id, int stock);
     }
 }

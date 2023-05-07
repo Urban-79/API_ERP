@@ -115,5 +115,20 @@
             <param name="id">Objet Product</param>
             <returns>test</returns>
         </member>
+        <member name="M:API_ERP.Controllers.StocksController.GetStock(System.Int32)">
+            <summary>
+            Get Stock
+            </summary>
+            <param name="id">Id du produit</param>
+            <returns>test</returns>
+        </member>
+        <member name="M:API_ERP.Controllers.StocksController.UpdateStock(System.Int32,System.Int32)">
+            <summary>
+            Update Stock
+            </summary>
+            <param name="id">Id du produit</param>
+             <param name="stock">nombre de stock</param>
+            <returns>test</returns>
+        </member>
     </members>
 </doc>

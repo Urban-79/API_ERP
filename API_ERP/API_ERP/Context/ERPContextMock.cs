@@ -198,7 +198,20 @@ namespace API_ERP.Context
 
             return null;
         }
-
+        public async Task<int> GetStockAsync(int id)
+        {
+            Product product = products.FirstOrDefault(c => c.Id == id);
+            int stock = product.Stock;
+            return stock;
+        }
+        public async Task<Product> UpdateStockAsync(int id,int stock)
+        {
+            Product product = products.FirstOrDefault(c => c.Id == id);
+            product.Stock = stock;
+            File.WriteAllText(".\\Data\\products.json", JsonConvert.SerializeObject(products));
+            return product;
+        }
+        
         #endregion
     }
 }

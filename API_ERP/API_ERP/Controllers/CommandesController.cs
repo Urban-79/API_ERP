@@ -7,11 +7,11 @@ namespace API_ERP.Controllers
     [ApiController]
     public class CommandesController : ControllerBase
     {
-        private readonly IERPApiService _erpApiService;
+        private readonly IERPApiService _ERPApiService;
 
-        public CommandesController(IERPApiService erpApiService)
+        public CommandesController(IERPApiService ERPApiService)
         {
-            _erpApiService = erpApiService;
+            _ERPApiService = ERPApiService;
         }
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace API_ERP.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCommand(int id)
         {
-            Order order = await _erpApiService.GetCommandAsync(id);
+            Order order = await _ERPApiService.GetCommandAsync(id);
             if (order == null)
             {
                 return NotFound();
@@ -38,7 +38,7 @@ namespace API_ERP.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllCommands()
         {
-            List<Order> orders = await _erpApiService.GetCommandsAsync();
+            List<Order> orders = await _ERPApiService.GetCommandsAsync();
             if (orders == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace API_ERP.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCommand(Order addedOrder)
         {
-            Order result = await _erpApiService.AddCommandAsync(addedOrder);
+            Order result = await _ERPApiService.AddCommandAsync(addedOrder);
             if (result == null)
             {
                 return NotFound();
@@ -72,7 +72,7 @@ namespace API_ERP.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateCommand(Order updatedOrder)
         {
-            Order result = await _erpApiService.UpdateCommandAsync(updatedOrder);
+            Order result = await _ERPApiService.UpdateCommandAsync(updatedOrder);
             if (result == null)
             {
                 return NotFound();
@@ -89,7 +89,7 @@ namespace API_ERP.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteCommand(int id)
         {
-            Order result = await _erpApiService.DeleteCommandAsync(id);
+            Order result = await _ERPApiService.DeleteCommandAsync(id);
             if (result == null)
             {
                 return NotFound();
