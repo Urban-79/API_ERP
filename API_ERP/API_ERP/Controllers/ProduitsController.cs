@@ -68,7 +68,7 @@ namespace API_ERP.Controllers
         /// <param name="updatedProduct">Objet Product</param>
         /// <returns>test</returns>
         [HttpPut]
-        public async Task<IActionResult> UpdateCommand(Product updatedProduct)
+        public async Task<IActionResult> UpdateProduct(Product updatedProduct)
         {
             Product result = await _ERPApiService.UpdateProductAsync(updatedProduct);
             if (result == null)

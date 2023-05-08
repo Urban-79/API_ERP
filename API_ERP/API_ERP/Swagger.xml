@@ -101,7 +101,7 @@
             <param name="addedOrder">object order </param>
             <returns>test</returns>
         </member>
-        <member name="M:API_ERP.Controllers.ProduitsController.UpdateCommand(API_ERP.Class.Product)">
+        <member name="M:API_ERP.Controllers.ProduitsController.UpdateProduct(API_ERP.Class.Product)">
             <summary>
             Update Product
             </summary>
