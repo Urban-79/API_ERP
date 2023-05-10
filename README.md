@@ -20,7 +20,7 @@ cd API_ERP
 3. Run the application
 dotnet run
 
-4. Navigate to `https://localhost:5001/swagger/index.html` to access the Swagger UI.
+4. Navigate to `https://localhost:7289/swagger/index.html` to access the Swagger UI.
 
 ## Running the Tests
 
