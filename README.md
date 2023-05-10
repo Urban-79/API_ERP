@@ -1,6 +1,6 @@
 # API_ERP
 
-API_ERP is a RESTful API built with ASP.NET Core that provides CRUD (Create, Read, Update, Delete) operations for Orders and Products. The API comes with a Swagger UI, which can be used to interact with the API endpoints.
+API_ERP is a RESTful API built with ASP.NET Core that provides CRUD (Create, Read, Update, Delete) operations. The API comes with a Swagger UI, which can be used to interact with the API endpoints.
 
 ## Getting Started
 
